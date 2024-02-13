@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8e8f3; /* Valentine's theme background */
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.player {
+    position: absolute;
+    bottom: 0;
+    animation-duration: 0.5s; /* Duration of one step */
+    animation-iteration-count: infinite;
+}
+
+#shukry {
+    left: 20%;
+    transform: scaleX(1); /* Face forward by default */
+    animation-name: walkShukry;
+}
+
+#avin {
+    right: 20%;
+    transform: scaleX(-1); /* Face forward by default */
+    animation-name: walkAvin;
+}
+
+.player img {
+    width: 150px; /* Öka bredden till 150px eller anpassa efter önskad storlek */
+    height: auto; /* Behåll proportionerna när du ändrar bredden */
+}
+
+
+.tomato {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('tomato.png'); /* Ange sökvägen till din tomato.png */
+    background-size: cover;
+}
+
+.health-bar {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background-color: green;
+    top: 30px; /* Justera efter behov */
+}
+
+#shukry-health {
+    left: 10px; /* Justera efter behov */
+}
+
+#avin-health {
+    right: 10px; /* Justera efter behov */
+}
+
+
+@keyframes walkShukry {
+    0% { transform: translateX(0) scaleX(1); }
+    50% { transform: translateX(-10px) scaleX(1); }
+    100% { transform: translateX(0) scaleX(1); }
+}
+
+@keyframes walkAvin {
+    0% { transform: translateX(0) scaleX(-1); }
+    50% { transform: translateX(10px) scaleX(-1); }
+    100% { transform: translateX(0) scaleX(-1); }
+}
+
+
+/* Exempel på mediaförfrågan för mindre skärmar */
+@media only screen and (max-width: 768px) {
+    .player img {
+        width: 100px; /* Justera storleken för spelarkaraktärer för mindre skärmar */
+    }
+    .health-bar {
+        width: 80px; /* Justera storleken på hälsobaren för mindre skärmar */
+    }
+}
