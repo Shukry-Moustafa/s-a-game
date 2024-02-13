@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&A Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="player-selection">
+            <h2>Choose Your Character</h2>
+            <button id="select-shukry">Shukry</button>
+            <button id="select-avin">Avin</button>
+        </div>
+        <div id="game-screen" style="display: none;">
+            <div id="shukry" class="player" data-health="100"><img src="shukry.png" alt="Shukry"></div>
+            <div id="avin" class="player" data-health="100"><img src="avin.png" alt="Avin"></div>
+            <div id="shukry-health" class="health-bar"></div>
+            <div id="avin-health" class="health-bar"></div>
+            <div id="projectile"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
